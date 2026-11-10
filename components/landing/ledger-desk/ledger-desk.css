@@ -1,0 +1,65 @@
+/* Ledger desk: the kit's dark tokens tuned to Median's surfaces. */
+.iso.ld {
+  --anatomy-page: var(--bg);
+  --anatomy-card: var(--bg);
+  --anatomy-paper: #0e0f12;
+  --anatomy-face: #1b1c20;
+  --anatomy-top: #1e2024;
+  --anatomy-shade-0: #101114;
+  --anatomy-shade-1: #131417;
+  --anatomy-shade-2: #17181c;
+  --anatomy-shade-3: #1a1c20;
+  --anatomy-lit-top: #34363c;
+  --anatomy-lit-shade: #26282d;
+  --anatomy-hi: #e6e8ec;
+  --anatomy-mid: #7c818a;
+  --anatomy-lo: #4a4e56;
+  --anatomy-faint: #2e3137;
+  --anatomy-lit: #ffffff;
+  --anatomy-halo: #000;
+  --anatomy-text: var(--text-muted);
+  --anatomy-muted: var(--text-faint);
+  --anatomy-mono: var(--font-geist-mono), ui-monospace, monospace;
+  --ld-void: #060708;
+  --ld-led: var(--accent);
+}
+
+.ld .ld-void {
+  fill: var(--ld-void);
+  stroke: none;
+}
+.ld .ld-wall {
+  stroke: none;
+}
+.ld .ld-wall[data-shade="0"] {
+  fill: var(--anatomy-shade-0);
+}
+.ld .ld-wall[data-shade="1"] {
+  fill: var(--anatomy-shade-1);
+}
+.ld .ld-screen {
+  fill: #08090b;
+}
+.ld .ld-display {
+  fill: var(--anatomy-hi);
+  font-family: var(--anatomy-mono);
+  font-size: 4.2px;
+  letter-spacing: 0.06em;
+  font-variant-numeric: tabular-nums;
+}
+.ld .ld-led {
+  fill: var(--ld-led);
+  stroke: none;
+  opacity: 0;
+}
+
+/* A soft key light behind the machine. */
+.ld-stage {
+  background: radial-gradient(60% 55% at 55% 52%, rgba(255, 255, 255, 0.035), transparent 70%);
+  outline: none;
+  border-radius: 12px;
+}
+.ld-stage:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
